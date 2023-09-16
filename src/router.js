@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import Accueil from "./screens/accueil/Accueil"
 import Contact from "./screens/contact/Contact"
+import Nice from "./screens/nice/Nice"
 
 const Routes = () => {
     const publicRoutes = [
@@ -20,10 +21,10 @@ const Routes = () => {
         //     path: '/about',
         //     element: <About />
         // },
-        // {
-        //     path: '/nice',
-        //     element: <Nice />
-        // },
+        {
+            path: '/nice',
+            element: <Nice />
+        },
         // {
         //     path: '/monaco',
         //     element: <Monaco />

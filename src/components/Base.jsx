@@ -8,7 +8,7 @@ const Base = ({ children }) => {
     const navigate = useNavigate();
 
     return (
-        <Box>
+        <Box >
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -33,7 +33,7 @@ const Base = ({ children }) => {
                     </MenuButton>
                 </Box>
             </Box>
-            <Box>
+            <Box >
                 {children}
             </Box>
             <Box sx={{
