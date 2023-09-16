@@ -10,11 +10,7 @@ const SectionAccueil = ({ title, date, description, path, item }) => {
         <React.Fragment>
             <article>
                 <ImageListItem sx={{
-                    width: '900px',
-                    height: '600px',
-                    objectFit: 'cover',
-                    marginBottom: '39px',
-                    transition: '0.3s ease',
+
                     '&:hover': {
                         opacity: '0.74',
                     },
@@ -26,6 +22,14 @@ const SectionAccueil = ({ title, date, description, path, item }) => {
                         srcSet={item.img}
                         alt={item.title}
                         loading="lazy"
+                        style={{
+                            width: '900px',
+                            height: '600px',
+                            objectFit: 'cover',
+                            marginBottom: '39px',
+                            transition: '0.3s ease',
+                            objectFit: 'cover',
+                        }}
                     />
                 </ImageListItem>
             </article>
@@ -39,11 +43,29 @@ const SectionAccueil = ({ title, date, description, path, item }) => {
                 <p>
                     {description}
                 </p>
-                <Typography onClick={() => navigate(path)}>
+                <Typography
+                    sx={{
+                        marginBottom: '100px',
+                        cursor: 'pointer',
+                        width: '60%',
+                        color: '#303030',
+                        textAlign: 'center',
+                        letterSpacing: '1px',
+                        textTransform: 'uppercase',
+                        marginLeft: 'auto',
+                        marginRight: 'auto',
+                        fontFamily: 'Montserrat, sans- serif',
+                        fontSize: '11px',
+                        lineHeight: '18px',
+                        textDecoration: 'none',
+                        transition: 'color 0.2s',
+                        display: 'block',
+                    }}
+                    onClick={() => navigate(path)}>
                     See More
                 </Typography>
             </article>
-        </React.Fragment>
+        </React.Fragment >
     )
 }
 
