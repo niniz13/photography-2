@@ -1,6 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import Accueil from "./screens/accueil/Accueil"
-import Contact from "./screens/contact/Contact"
 import Nice from "./screens/nice/Nice"
 import LaCiotat from "./screens/laCiotat/LaCiotat"
 import Monaco from "./screens/monaco/Monaco"
@@ -10,6 +9,9 @@ import About from "./screens/about/About"
 
 const Routes = () => {
     const publicRoutes = [
+        /*---------------------------------*/
+        /*------------ ACCUEIL ------------*/
+        /*---------------------------------*/
         {
             path: '/',
             element: <Accueil />
@@ -18,30 +20,44 @@ const Routes = () => {
             path: '/accueil',
             element: <Accueil />
         },
-        {
-            path: '/contact',
-            element: <Contact />
-        },
+        /*---------------------------------*/
+        /*------------- ABOUT -------------*/
+        /*---------------------------------*/
         {
             path: '/about',
             element: <About />
         },
+        /*--------------------------------*/
+        /*------------- NICE -------------*/
+        /*--------------------------------*/
         {
             path: '/nice',
             element: <Nice />
         },
+        /*---------------------------------*/
+        /*----------- LA CIOTAT -----------*/
+        /*---------------------------------*/
         {
             path: '/laciotat',
             element: <LaCiotat />
         },
+        /*--------------------------------*/
+        /*------------ MONACO ------------*/
+        /*--------------------------------*/
         {
             path: '/monaco',
             element: <Monaco />
         },
+        /*--------------------------------*/
+        /*----------- AQUARIUM -----------*/
+        /*--------------------------------*/
         {
             path: '/aquarium',
             element: <Aquarium />
         },
+        /*---------------------------------*/
+        /*----------- GP MONACO -----------*/
+        /*---------------------------------*/
         {
             path: '/gpmonaco',
             element: <GpMonaco />
