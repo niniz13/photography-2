@@ -25,22 +25,22 @@ const Routes = () => {
             path: '/nice',
             element: <Nice />
         },
-        // {
-        //     path: '/monaco',
-        //     element: <Monaco />
-        // },
-        // {
-        //     path: '/begur',
-        //     element: <Begur />
-        // },
-        // {
-        //     path: '/aquarium',
-        //     element: <Aquarium />
-        // },
-        // {
-        //     path: '/sausset',
-        //     element: <Sausset />
-        // }
+        {
+            path: '/laciotat',
+            element: <LaCiotat />
+        },
+        {
+            path: '/monaco',
+            element: <Monaco />
+        },
+        {
+            path: '/aquarium',
+            element: <Aquarium />
+        },
+        {
+            path: '/gpmonaco',
+            element: <GpMonaco />
+        }
     ]
     const router = createBrowserRouter([
         ...publicRoutes

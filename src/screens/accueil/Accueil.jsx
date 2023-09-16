@@ -30,8 +30,8 @@ const Accueil = () => {
     return (
         <Base>
             <SectionAccueil title={"Nice"} date={"May 2023"} path={'/nice'} item={itemData[0]} description={descriptionNice} />
-            <SectionAccueil title={"La Ciotat"} date={"December 29, 2022"} path={'/laCiotat'} item={itemData[1]} description={descriptionLaCiotat} />
-            <SectionAccueil title={"GP Monaco"} date={"May 28, 2023"} path={'/gpMonaco'} item={itemData[2]} description={descriptiongpMonaco} />
+            <SectionAccueil title={"La Ciotat"} date={"December 29, 2022"} path={'/laciotat'} item={itemData[1]} description={descriptionLaCiotat} />
+            <SectionAccueil title={"GP Monaco"} date={"May 28, 2023"} path={'/gpmonaco'} item={itemData[2]} description={descriptiongpMonaco} />
             <SectionAccueil title={"Monaco"} date={"August 2022/2023"} path={'/monaco'} item={itemData[3]} description={descriptionMonaco} />
             <SectionAccueil title={"Monaco Aquarium"} date={"August 20, 2022"} path={'/aquarium'} item={itemData[4]} description={descriptionAquarium} />
         </Base>

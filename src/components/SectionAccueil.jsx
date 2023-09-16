@@ -10,7 +10,7 @@ const SectionAccueil = ({ title, date, description, path, item }) => {
         <React.Fragment>
             <article>
                 <ImageListItem sx={{
-
+                    transition: '0.3s ease',
                     '&:hover': {
                         opacity: '0.74',
                     },
@@ -27,7 +27,6 @@ const SectionAccueil = ({ title, date, description, path, item }) => {
                             height: '600px',
                             objectFit: 'cover',
                             marginBottom: '39px',
-                            transition: '0.3s ease',
                             objectFit: 'cover',
                         }}
                     />
