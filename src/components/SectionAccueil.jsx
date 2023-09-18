@@ -23,8 +23,8 @@ const SectionAccueil = ({ title, date, description, path, item }) => {
                         alt={item.title}
                         loading="lazy"
                         style={{
-                            width: '900px',
-                            height: '600px',
+                            width: '100%',
+                            height: 'auto',
                             objectFit: 'cover',
                             marginBottom: '39px',
                             objectFit: 'cover',

@@ -6,6 +6,7 @@ import Monaco from "./screens/monaco/Monaco"
 import Aquarium from "./screens/aquarium/Aquarium"
 import GpMonaco from "./screens/gpMonaco/GpMonaco"
 import About from "./screens/about/About"
+import NotFound from "./components/NotFound"
 
 const Routes = () => {
     const publicRoutes = [
@@ -61,6 +62,13 @@ const Routes = () => {
         {
             path: '/gpmonaco',
             element: <GpMonaco />
+        },
+        /*----------------------------------*/
+        /*------------- ERREUR 404 ----------*/
+        /*----------------------------------*/
+        {
+            path: '*',
+            element: <NotFound />
         }
     ]
     const router = createBrowserRouter([

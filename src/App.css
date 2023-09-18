@@ -80,3 +80,49 @@ article p {
   line-height: 22px;
   display: block;
 }
+
+.not-found-container {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.not-found-content {
+  /* Utilisez une classe spécifique */
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.not-found-content h1 {
+  /* Styles spécifiques aux éléments h1 à l'intérieur de not-found-content */
+  font-size: 36px;
+  color: #ff5555;
+}
+
+.not-found-content p {
+  /* Styles spécifiques aux éléments p à l'intérieur de not-found-content */
+  font-size: 18px;
+}
+
+.not-found-content a {
+  /* Styles spécifiques aux éléments a à l'intérieur de not-found-content */
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.not-found-content a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  article {
+    width: 300px;
+    margin: 0 10%;
+  }
+}
