@@ -9,10 +9,6 @@ const LaCiotat = () => {
             title: "Port de La Ciotat",
         },
         {
-            img: "img/LaCiotat/IMG_1319.webp",
-            title: "Port de La Ciotat",
-        },
-        {
             img: "img/LaCiotat/IMG_1321.webp",
             title: "Port de La Ciotat",
         },
@@ -65,19 +61,7 @@ const LaCiotat = () => {
             title: "Port de La Ciotat",
         },
         {
-            img: "img/LaCiotat/IMG_1393.webp",
-            title: "Port de La Ciotat",
-        },
-        {
             img: "img/LaCiotat/IMG_1395.webp",
-            title: "Port de La Ciotat",
-        },
-        {
-            img: "img/LaCiotat/IMG_1398.webp",
-            title: "Port de La Ciotat",
-        },
-        {
-            img: "img/LaCiotat/IMG_1400.webp",
             title: "Port de La Ciotat",
         },
         {
@@ -85,19 +69,7 @@ const LaCiotat = () => {
             title: "Port de La Ciotat",
         },
         {
-            img: "img/LaCiotat/IMG_1408.webp",
-            title: "Port de La Ciotat",
-        },
-        {
             img: "img/LaCiotat/IMG_1412.webp",
-            title: "Port de La Ciotat",
-        },
-        {
-            img: "img/LaCiotat/IMG_1420.webp",
-            title: "Port de La Ciotat",
-        },
-        {
-            img: "img/LaCiotat/IMG_1424.webp",
             title: "Port de La Ciotat",
         },
     ]

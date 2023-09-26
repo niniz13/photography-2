@@ -29,10 +29,6 @@ const Nice = () => {
             title: "Rue de Nice",
         },
         {
-            img: "img/Nice/IMG_2791.webp",
-            title: "Pizza Nice",
-        },
-        {
             img: "img/Nice/IMG_2802.webp",
             title: "Vue promenade des anglais",
         },
