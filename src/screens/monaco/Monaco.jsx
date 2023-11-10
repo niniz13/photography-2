@@ -5,16 +5,8 @@ const Monaco = () => {
 
     const itemData = [
         {
-            img: "img/Monaco/IMG_0701.webp",
-            title: "Hotel de Paris",
-        },
-        {
             img: "img/Monaco/IMG_0895.webp",
             title: "Casino Monaco",
-        },
-        {
-            img: "img/Monaco/IMG_3496.webp",
-            title: "Ferrari",
         },
         {
             img: "img/Monaco/IMG_3497.webp",
@@ -37,20 +29,8 @@ const Monaco = () => {
             title: "Ferrari",
         },
         {
-            img: "img/Monaco/IMG_3504.webp",
-            title: "Place du Casino",
-        },
-        {
-            img: "img/Monaco/IMG_3555.webp",
-            title: "Ferrari",
-        },
-        {
             img: "img/Monaco/IMG_3557.webp",
             title: "Ferrari",
-        },
-        {
-            img: "img/Monaco/IMG_3611.webp",
-            title: "Casino Monaco",
         },
         {
             img: "img/Monaco/IMG_3620.webp",
@@ -59,10 +39,6 @@ const Monaco = () => {
         {
             img: "img/Monaco/IMG_3625.webp",
             title: "Ferrari",
-        },
-        {
-            img: "img/Monaco/IMG_3630.webp",
-            title: "Lamborghini",
         },
         {
             img: "img/Monaco/IMG_3641.webp",

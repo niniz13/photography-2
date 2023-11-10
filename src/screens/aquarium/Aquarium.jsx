@@ -17,10 +17,6 @@ const Aquarium = () => {
             title: "Aquarium de Monaco",
         },
         {
-            img: "img/Aquarium/IMG_3618.webp",
-            title: "Aquarium de Monaco",
-        },
-        {
             img: "img/Aquarium/IMG_3622.webp",
             title: "Aquarium de Monaco",
         },
@@ -54,14 +50,6 @@ const Aquarium = () => {
         },
         {
             img: "img/Aquarium/IMG_3642.webp",
-            title: "Aquarium de Monaco",
-        },
-        {
-            img: "img/Aquarium/IMG_3645.webp",
-            title: "Aquarium de Monaco",
-        },
-        {
-            img: "img/Aquarium/IMG_3648.webp",
             title: "Aquarium de Monaco",
         },
     ]

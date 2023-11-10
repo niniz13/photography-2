@@ -9,10 +9,6 @@ const Nice = () => {
             title: 'Pizza Nice',
         },
         {
-            img: "img/Nice/IMG_2776.webp",
-            title: "Lampadaire",
-        },
-        {
             img: "img/Nice/IMG_2778.webp",
             title: "Vue de la mer",
         },
@@ -35,10 +31,6 @@ const Nice = () => {
         {
             img: "img/Nice/IMG_2803.webp",
             title: "Hotel Suisse",
-        },
-        {
-            img: "img/Nice/IMG_2806.webp",
-            title: "Lampadaire rouge",
         },
         {
             img: "img/Nice/IMG_3292.webp",

@@ -29,23 +29,7 @@ const LaCiotat = () => {
             title: "Port de La Ciotat",
         },
         {
-            img: "img/LaCiotat/IMG_1342.webp",
-            title: "Port de La Ciotat",
-        },
-        {
-            img: "img/LaCiotat/IMG_1343.webp",
-            title: "Port de La Ciotat",
-        },
-        {
             img: "img/LaCiotat/IMG_1348.webp",
-            title: "Port de La Ciotat",
-        },
-        {
-            img: "img/LaCiotat/IMG_1370.webp",
-            title: "Port de La Ciotat",
-        },
-        {
-            img: "img/LaCiotat/IMG_1371.webp",
             title: "Port de La Ciotat",
         },
         {
@@ -66,10 +50,6 @@ const LaCiotat = () => {
         },
         {
             img: "img/LaCiotat/IMG_1405.webp",
-            title: "Port de La Ciotat",
-        },
-        {
-            img: "img/LaCiotat/IMG_1412.webp",
             title: "Port de La Ciotat",
         },
     ]

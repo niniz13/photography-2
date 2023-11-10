@@ -17,10 +17,6 @@ const GpMonaco = () => {
             title: "Monaco GP",
         },
         {
-            img: "img/MonacoGP/IMG_2924.webp",
-            title: "Monaco GP",
-        },
-        {
             img: "img/MonacoGP/IMG_2936.webp",
             title: "Monaco GP",
         },
@@ -41,19 +37,7 @@ const GpMonaco = () => {
             title: "Monaco GP",
         },
         {
-            img: "img/MonacoGP/IMG_3043.webp",
-            title: "Monaco GP",
-        },
-        {
             img: "img/MonacoGP/IMG_3092.webp",
-            title: "Monaco GP",
-        },
-        {
-            img: "img/MonacoGP/IMG_3095.webp",
-            title: "Monaco GP",
-        },
-        {
-            img: "img/MonacoGP/IMG_3097.webp",
             title: "Monaco GP",
         },
         {
@@ -70,10 +54,6 @@ const GpMonaco = () => {
         },
         {
             img: "img/MonacoGP/IMG_3270.webp",
-            title: "Monaco GP",
-        },
-        {
-            img: "img/MonacoGP/IMG_3280.webp",
             title: "Monaco GP",
         },
     ]

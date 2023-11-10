@@ -4,12 +4,12 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
 const ListPictures = ({ itemData }) => {
-    const [cols, setCols] = useState(3);
+    const [cols, setCols] = useState(4);
 
     useEffect(() => {
         const updateCols = () => {
             if (window.innerWidth >= 900) {
-                setCols(3);
+                setCols(4);
             } else if (window.innerWidth >= 650) {
                 setCols(2);
             } else {
