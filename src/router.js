@@ -1,11 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
-import Accueil from "./screens/accueil/Accueil"
-import Nice from "./screens/nice/Nice"
-import LaCiotat from "./screens/laCiotat/LaCiotat"
-import Monaco from "./screens/monaco/Monaco"
-import Aquarium from "./screens/aquarium/Aquarium"
-import GpMonaco from "./screens/gpMonaco/GpMonaco"
-import About from "./screens/about/About"
+import Accueil from "./screens/Accueil"
+// import About from "./screens/About"
 import NotFound from "./components/NotFound"
 
 const Routes = () => {
@@ -21,48 +16,13 @@ const Routes = () => {
             path: '/accueil',
             element: <Accueil />
         },
-        /*---------------------------------*/
-        /*------------- ABOUT -------------*/
-        /*---------------------------------*/
-        {
-            path: '/about',
-            element: <About />
-        },
-        /*--------------------------------*/
-        /*------------- NICE -------------*/
-        /*--------------------------------*/
-        {
-            path: '/nice',
-            element: <Nice />
-        },
-        /*---------------------------------*/
-        /*----------- LA CIOTAT -----------*/
-        /*---------------------------------*/
-        {
-            path: '/laciotat',
-            element: <LaCiotat />
-        },
-        /*--------------------------------*/
-        /*------------ MONACO ------------*/
-        /*--------------------------------*/
-        {
-            path: '/monaco',
-            element: <Monaco />
-        },
-        /*--------------------------------*/
-        /*----------- AQUARIUM -----------*/
-        /*--------------------------------*/
-        {
-            path: '/aquarium',
-            element: <Aquarium />
-        },
-        /*---------------------------------*/
-        /*----------- GP MONACO -----------*/
-        /*---------------------------------*/
-        {
-            path: '/gpmonaco',
-            element: <GpMonaco />
-        },
+        //         /*---------------------------------*/
+        //         /*------------- ABOUT -------------*/
+        //         /*---------------------------------*/
+        //         {
+        //             path: '/about',
+        //             element: <About />
+        //         },
         /*----------------------------------*/
         /*------------- ERREUR 404 ----------*/
         /*----------------------------------*/

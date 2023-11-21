@@ -4,11 +4,11 @@ const FooterIcon = ({ href, src, alt }) => {
     return (
         <Link
             style={{
-                width: '20px',
-                marginLeft: '4px',
-                marginRight: '4px',
-                padding: '3px',
-                transition: 'opacity 0.2s',
+                width: "20px",
+                marginLeft: "4px",
+                marginRight: "4px",
+                padding: "3px",
+                transition: "opacity 0.2s",
             }}
             to={href}
         >
@@ -16,10 +16,7 @@ const FooterIcon = ({ href, src, alt }) => {
                 src={src}
                 alt={alt}
                 style={{
-                    width: '100%',
-                    '&:hover': {
-                        opacity: '0.74',
-                    },
+                    width: "20px",
                 }}
             />
         </Link >
