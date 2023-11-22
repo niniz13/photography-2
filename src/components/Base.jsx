@@ -1,22 +1,38 @@
 import { useState } from 'react';
 import { Box, Typography } from "@mui/material"
 import { useNavigate } from "react-router-dom"
+import { useSpring, animated } from 'react-spring'
 import FooterIcon from "./FooterIcon"
-import cursor from "../cursor.png"
+import { useEffect } from 'react';
 
 const Base = ({ children }) => {
     const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const menuAnimation = useSpring({
+        transform: isMenuOpen ? 'translateY(0%)' : 'translateY(-100%)',
+        opacity: 1,
+        config: { tension: 320, friction: 20 }
+    });
+
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+        if (!isMenuOpen) {
+            setIsMenuOpen(true);
+        } else {
+            setIsMenuOpen(false);
+        }
     };
 
     return (
-        <Box>
+        <Box sx={{
+            width: "100vw"
+        }}>
             {isMenuOpen && (
-                <Box
-                    sx={{
+                <animated.div
+                    style={{
+                        ...menuAnimation,
+                        top: 0,
+                        left: 0,
                         position: 'fixed',
                         display: "flex",
                         flexDirection: "column",
@@ -26,8 +42,6 @@ const Base = ({ children }) => {
                         height: '100vh',
                         backgroundColor: "#000",
                         zIndex: 999,
-                        transition: 'transform 0.3s ease-in-out',
-                        transform: 'translateY(0)',
                         cursor: "default"
                     }}
                 >
@@ -67,7 +81,7 @@ const Base = ({ children }) => {
                     >
                         About
                     </Typography>
-                </Box>
+                </animated.div>
             )}
             <Box sx={{
                 margin: "0 3em",
@@ -84,6 +98,7 @@ const Base = ({ children }) => {
                 </Typography>
                 <Typography
                     sx={{
+                        cursor: "pointer",
                         fontSize: "1.5em",
                         fontFamily: "Bebas Neue",
                     }}

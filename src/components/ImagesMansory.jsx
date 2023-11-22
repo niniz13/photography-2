@@ -26,7 +26,7 @@ const ImagesMansory = ({ itemData }) => {
         <Box sx={{
             margin: "0 3em",
         }}>
-            <ImageList variant="masonry" cols={cols} gap={20}>
+            <ImageList variant="masonry" cols={cols} gap={30}>
                 {itemData.map((item) => (
                     <ImageListItem key={item.img}>
                         <img
