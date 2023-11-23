@@ -1,28 +1,27 @@
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, useMediaQuery } from "@mui/material";
 import Base from "../components/Base"
 
 const About = () => {
+    const isSmallScreen = useMediaQuery('(max-width:1050px)');
 
     return (
         <Base>
             <Box sx={{
-                width: "100%",
+                width: "100vw",
+                height: isSmallScreen ? "" : "76vh",
                 display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-around"
+                flexDirection: isSmallScreen ? "column" : "row",
+                alignItems: "center",
+                justifyContent: "space-evenly"
             }}>
                 <Box sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    width: "25%",
-                    height: "76vh",
-                    alignItems: "center",
-                    justifyContent: "flex-end"
+                    maxWidth: isSmallScreen ? "100vw" : "30vw",
+                    position: "relative",
+                    top: "10%",
+                    margin: isSmallScreen ? "0 1em" : ""
                 }}>
 
-                    <img style={{
-                        width: "350px"
-                    }}
+                    <img style={{ width: "100%" }}
                         src="img/IMG_3321.JPG"
                         alt="About picture"
                     />
@@ -35,16 +34,16 @@ const About = () => {
                     </Typography>
                 </Box>
                 <Box sx={{
+                    maxWidth: isSmallScreen ? "100vw" : "30vw",
                     display: "flex",
                     flexDirection: "column",
-                    width: "25%",
-                    height: "76vh",
                     alignItems: "center",
-                    justifyContent: "center"
+                    margin: isSmallScreen ? "0 1em" : ""
                 }}>
                     <Typography sx={{
-                        zIndex: "5",
-                        top: "15%",
+                        position: "relative",
+                        top: "7vh",
+                        zIndex: "999",
                         fontSize: "7vw",
                         fontWeight: "400",
                         lineHeight: "0.9",
@@ -52,25 +51,18 @@ const About = () => {
                     }}>
                         Jérémy Gross
                     </Typography>
-                    <Box sx={{
-                        width: "540px",
-                        height: "300px"
-                    }}>
-                        <img style={{
-                            width: "100%"
-                        }}
+                    <Box>
+                        <img style={{ width: "100%", }}
                             src="img/IMG_1689.JPG"
                             alt="About picture" />
                     </Box>
 
                 </Box>
                 <Box sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    width: "25%",
-                    height: "76vh",
-                    alignItems: "center",
-                    justifyContent: "flex-end"
+                    maxWidth: isSmallScreen ? "100vw" : "30vw",
+                    position: "relative",
+                    top: "10%",
+                    margin: isSmallScreen ? "0 1em" : ""
                 }}>
                     <Typography sx={{
                         fontFamily: "Bebas Neue",
@@ -79,9 +71,7 @@ const About = () => {
                     }}>
                         Lorem ipsum dolor sit amet consectetur. Magna diam egestas mauris massa ullamcorper at. Proin tincidunt mattis proin massa at mi ullamcorper.
                     </Typography>
-                    <img style={{
-                        width: "350px"
-                    }}
+                    <img style={{ width: "100%" }}
                         src="img/IMG_7877.JPG"
                         alt="About picture"
                     />

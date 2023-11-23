@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Typography } from "@mui/material"
+import { Box, Typography, useMediaQuery } from "@mui/material"
 import { useNavigate } from "react-router-dom"
 import { useSpring, animated } from 'react-spring'
 import FooterIcon from "./FooterIcon"
@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 const Base = ({ children }) => {
     const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const isSmallScreen = useMediaQuery('(max-width:1050px)');
 
     const menuAnimation = useSpring({
         transform: isMenuOpen ? 'translateY(0%)' : 'translateY(-100%)',
@@ -84,7 +85,7 @@ const Base = ({ children }) => {
                 </animated.div>
             )}
             <Box sx={{
-                margin: "0 3em",
+                margin: isSmallScreen ? "0 1em" : "0 3em",
                 height: "12vh",
                 display: "flex",
                 justifyContent: "space-between",
@@ -112,7 +113,7 @@ const Base = ({ children }) => {
             </Box>
             <Box sx={{
                 height: "12vh",
-                margin: "0 3em",
+                margin: isSmallScreen ? "0 1em" : "0 3em",
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-between",

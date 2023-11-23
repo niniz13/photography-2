@@ -5,8 +5,7 @@ const FooterIcon = ({ href, src, alt }) => {
         <Link
             style={{
                 width: "20px",
-                marginLeft: "4px",
-                marginRight: "4px",
+                margin: "0 2px",
                 padding: "3px",
                 transition: "opacity 0.2s",
             }}
