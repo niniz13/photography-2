@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
-const ImagesMansory = ({ itemData }) => {
+const ImagesMansory = ({ itemData, handleOpen }) => {
     const [cols, setCols] = useState(2);
 
     useEffect(() => {
@@ -28,7 +28,7 @@ const ImagesMansory = ({ itemData }) => {
         }}>
             <ImageList variant="masonry" cols={cols} gap={30}>
                 {itemData.map((item) => (
-                    <ImageListItem key={item.img}>
+                    <ImageListItem key={item.img} onClick={handleOpen}>
                         <img
                             src={item.img}
                             srcSet={item.img}

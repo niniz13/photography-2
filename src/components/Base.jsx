@@ -3,7 +3,6 @@ import { Box, Typography, useMediaQuery } from "@mui/material"
 import { useNavigate } from "react-router-dom"
 import { useSpring, animated } from 'react-spring'
 import FooterIcon from "./FooterIcon"
-import { useEffect } from 'react';
 
 const Base = ({ children }) => {
     const navigate = useNavigate();

@@ -27,10 +27,11 @@ const About = () => {
                     />
                     <Typography sx={{
                         fontFamily: "Bebas Neue",
-                        fontSize: "1.5em",
+                        fontSize: "1.4em",
                         lineHeight: "1.2"
                     }}>
-                        Lorem ipsum dolor sit amet consectetur. Magna diam egestas mauris massa ullamcorper at. Proin tincidunt mattis proin massa at mi ullamcorper.
+                        I'm a passionate photographer from Aix-en-Provence, France, specializing in automotive photography. While cars are my main focus, I also explore various
+                        genres like landscapes, portraits, architecture, and street photography.
                     </Typography>
                 </Box>
                 <Box sx={{
@@ -41,6 +42,7 @@ const About = () => {
                     margin: isSmallScreen ? "0 1em" : ""
                 }}>
                     <Typography sx={{
+                        display: isSmallScreen ? "None" : "flex",
                         position: "relative",
                         top: "7vh",
                         zIndex: "999",
@@ -66,10 +68,11 @@ const About = () => {
                 }}>
                     <Typography sx={{
                         fontFamily: "Bebas Neue",
-                        fontSize: "1.5em",
+                        fontSize: "1.4em",
                         lineHeight: "1.2"
                     }}>
-                        Lorem ipsum dolor sit amet consectetur. Magna diam egestas mauris massa ullamcorper at. Proin tincidunt mattis proin massa at mi ullamcorper.
+                        Through my lens, I capture the beauty of France, aiming to share my unique perspective and create timeless memories.
+                        Join me on this visual journey through the link below!
                     </Typography>
                     <img style={{ width: "100%" }}
                         src="img/IMG_7877.JPG"
