@@ -1,8 +1,22 @@
+import React from 'react';
 import { Typography, Box, useMediaQuery } from "@mui/material";
+import { animated, useSpring } from '@react-spring/web';
 import Base from "../components/Base"
 
 const About = () => {
     const isSmallScreen = useMediaQuery('(max-width:1050px)');
+
+    const upSlideAnimation = useSpring({
+        from: { opacity: 0, transform: 'translateY(50vh)' },
+        to: { opacity: 1, transform: 'translateY(0)' },
+        config: { duration: 1000 },
+    });
+
+    const downSlideAnimation = useSpring({
+        from: { opacity: 0, transform: 'translateY(-50vh)' },
+        to: { opacity: 1, transform: 'translateY(0)' },
+        config: { duration: 1000 },
+    });
 
     return (
         <Base>
@@ -14,7 +28,8 @@ const About = () => {
                 alignItems: "center",
                 justifyContent: "space-evenly"
             }}>
-                <Box sx={{
+                <animated.div style={{
+                    ...upSlideAnimation,
                     maxWidth: isSmallScreen ? "100vw" : "30vw",
                     position: "relative",
                     top: "10%",
@@ -33,8 +48,9 @@ const About = () => {
                         I'm a passionate photographer from Aix-en-Provence, France, specializing in automotive photography. While cars are my main focus, I also explore various
                         genres like landscapes, portraits, architecture, and street photography.
                     </Typography>
-                </Box>
-                <Box sx={{
+                </animated.div>
+                <animated.div style={{
+                    ...downSlideAnimation,
                     maxWidth: isSmallScreen ? "100vw" : "30vw",
                     display: "flex",
                     flexDirection: "column",
@@ -59,8 +75,9 @@ const About = () => {
                             alt="About picture" />
                     </Box>
 
-                </Box>
-                <Box sx={{
+                </animated.div>
+                <animated.div style={{
+                    ...upSlideAnimation,
                     maxWidth: isSmallScreen ? "100vw" : "30vw",
                     position: "relative",
                     top: "10%",
@@ -78,9 +95,9 @@ const About = () => {
                         src="img/IMG_7877.JPG"
                         alt="About picture"
                     />
-                </Box>
+                </animated.div>
             </Box>
-        </Base>
+        </Base >
     )
 
 }

@@ -1,7 +1,7 @@
 import Base from "../components/Base"
 import ImagesMansory from "../components/ImagesMansory";
 import React, { useState } from 'react';
-import { Box, IconButton, Modal } from "@mui/material";
+import { Box, IconButton, Modal, useMediaQuery } from "@mui/material";
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import { animated, useTransition } from '@react-spring/web';
@@ -69,26 +69,38 @@ const Accueil = () => {
 
     const [index, setIndex] = useState(0);
     const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
+    const [leftToRight, setLeftToRight] = useState(true);
+
+    const isSmallScreen = useMediaQuery('(max-width:1050px)');
+
+    const handleOpen = () => {
+        if (!isSmallScreen) {
+            setOpen(true);
+        }
+    }
+
     const handleClose = () => setOpen(false);
 
     const transitions = useTransition(index, {
-        from: { opacity: 0 },
-        enter: { opacity: 1 },
-        leave: { opacity: 0 },
+        from: { opacity: 1, transform: leftToRight ? 'translateX(100%)' : 'translateX(-100%)' },
+        enter: { opacity: 1, transform: 'translateX(0%)' },
+        leave: { opacity: 0, transform: leftToRight ? 'translateX(-100%)' : 'translateX(100%)' },
+        config: { duration: 100 },
     });
 
     const nextSlide = () => {
         setIndex((state) => (state + 1) % itemData.length);
+        setLeftToRight(true)
     };
 
     const previousSlide = () => {
         setIndex((state) => (state - 1 + itemData.length) % itemData.length);
+        setLeftToRight(false)
     };
 
     return (
         <Base>
-            <ImagesMansory itemData={itemData} handleOpen={handleOpen} />
+            <ImagesMansory itemData={itemData} handleOpen={handleOpen} setIndex={setIndex} />
 
             <Modal
                 open={open}
@@ -106,47 +118,49 @@ const Accueil = () => {
             >
                 <Box sx={{
                     display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center"
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center"
                 }}>
+
                     {transitions((style, i) => (
                         <animated.div
                             key={i}
                             style={{
                                 ...style,
                                 position: "absolute",
-                                width: "800px",
-                                height: "500px",
+                                width: "auto",
+                                height: "80vh",
                                 overflow: "hidden",
                             }}
                         >
                             <img
-                                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                                style={{ width: "100%", height: "100%" }}
                                 src={itemData[index].img}
                                 alt={`Image ${i}`}
                             />
                         </animated.div>
                     ))}
-                    <Box sx={{
-                        width: "90vw",
-                        display: "flex",
-                        justifyContent: "space-between"
-                    }}>
-                        <IconButton sx={{
-                        }} onClick={previousSlide}>
-                            <ArrowCircleLeftIcon sx={{
-                                fontSize: "1.5em",
-                                color: "#fff"
-                            }} />
-                        </IconButton>
-                        <IconButton sx={{
-                        }} onClick={nextSlide}>
-                            <ArrowCircleRightIcon sx={{
-                                fontSize: "1.5em",
-                                color: "#fff"
-                            }} />
-                        </IconButton>
-                    </Box>
+                    <IconButton sx={{
+                        position: "absolute",
+                        left: "0",
+                        marginLeft: "1em"
+                    }} onClick={previousSlide}>
+                        <ArrowCircleLeftIcon sx={{
+                            fontSize: "1.5em",
+                            color: "#fff"
+                        }} />
+                    </IconButton>
+                    <IconButton sx={{
+                        position: "absolute",
+                        right: "0",
+                        marginRight: "1em"
+                    }} onClick={nextSlide}>
+                        <ArrowCircleRightIcon sx={{
+                            fontSize: "1.5em",
+                            color: "#fff"
+                        }} />
+                    </IconButton>
                 </Box>
             </Modal>
         </Base>

@@ -64,9 +64,13 @@ const Base = ({ children }) => {
                             fontSize: "5em",
                             color: "#fff",
                             fontFamily: "Bebas Neue",
-                            cursor: "pointer"
+                            cursor: "pointer",
+                            transition: "ease 0.3s",
+                            '&:hover': {
+                                opacity: "0.6"
+                            }
                         }}
-                        onClick={() => navigate('/accueil')}
+                        onClick={() => navigate('/')}
                     >
                         Home
                     </Typography>
@@ -75,7 +79,11 @@ const Base = ({ children }) => {
                             fontSize: "5em",
                             color: "#fff",
                             fontFamily: "Bebas Neue",
-                            cursor: "pointer"
+                            cursor: "pointer",
+                            transition: "ease 0.3s",
+                            '&:hover': {
+                                opacity: "0.6"
+                            }
                         }}
                         onClick={() => navigate('/about')}
                     >
@@ -92,8 +100,14 @@ const Base = ({ children }) => {
             }}>
                 <Typography sx={{
                     fontSize: "2em",
-                    fontFamily: "Bebas Neue"
-                }}>
+                    fontFamily: "Bebas Neue",
+                    cursor: "pointer",
+                    transition: "ease 0.3s",
+                    '&:hover': {
+                        opacity: "0.5"
+                    }
+                }}
+                    onClick={() => navigate('/')}>
                     Jérémy Gross
                 </Typography>
                 <Typography
@@ -101,6 +115,10 @@ const Base = ({ children }) => {
                         cursor: "pointer",
                         fontSize: "1.5em",
                         fontFamily: "Bebas Neue",
+                        transition: "ease 0.3s",
+                        '&:hover': {
+                            opacity: "0.6"
+                        }
                     }}
                     onClick={toggleMenu}
                 >
