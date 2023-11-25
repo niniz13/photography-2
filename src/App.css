@@ -16,71 +16,6 @@ body {
   align-items: center;
 }
 
-/*--------------------------------------*/
-/*--------------- HEADER ---------------*/
-/*--------------------------------------*/
-
-h1 {
-  letter-spacing: 1px;
-  margin-bottom: 0;
-  font-size: 53px;
-  line-height: 57px;
-  display: inline-block;
-  font-family: Montserrat, sans-serif;
-  font-weight: 700;
-  color: #303030;
-  transition: 0.3s ease;
-}
-
-h1:hover {
-  cursor: pointer;
-  color: #959595;
-}
-
-/*--------------------------------------*/
-/*--------------- ACCUEIL ---------------*/
-/*--------------------------------------*/
-
-article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 600px;
-}
-
-article h2 {
-  color: #303030;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: Montserrat, sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 25px;
-  display: block;
-}
-
-article span {
-  color: #ccc;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 25px;
-  font-size: 12px;
-  line-height: 18px;
-}
-
-article p {
-  color: #303030;
-  font-family: Arial, sans-serif;
-  margin-bottom: 52px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 14px;
-  line-height: 22px;
-  display: block;
-}
-
 .not-found-container {
   width: auto;
   display: flex;
@@ -118,11 +53,4 @@ article p {
 
 .not-found-content a:hover {
   text-decoration: underline;
-}
-
-@media screen and (max-width: 600px) {
-  article {
-    width: 300px;
-    margin: 0 10%;
-  }
 }
