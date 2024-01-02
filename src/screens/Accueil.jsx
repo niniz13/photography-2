@@ -135,7 +135,7 @@ const Accueil = () => {
                             }}
                         >
                             <img
-                                style={{ width: "100%", height: "100%" }}
+                                style={{ width: "auto", height: "100%" }}
                                 src={itemData[index].img}
                                 alt={`Image ${i}`}
                             />
