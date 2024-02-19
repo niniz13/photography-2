@@ -85,6 +85,21 @@ const Base = ({ children }) => {
                                 opacity: "0.6"
                             }
                         }}
+                        onClick={() => navigate('/gears')}
+                    >
+                        Gears
+                    </Typography>
+                    <Typography
+                        sx={{
+                            fontSize: "5em",
+                            color: "#fff",
+                            fontFamily: "Bebas Neue",
+                            cursor: "pointer",
+                            transition: "ease 0.3s",
+                            '&:hover': {
+                                opacity: "0.6"
+                            }
+                        }}
                         onClick={() => navigate('/about')}
                     >
                         About

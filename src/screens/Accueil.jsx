@@ -10,7 +10,19 @@ const Accueil = () => {
 
     const itemData = [
         {
+            img: "img/IMG_3725.webp",
+            title: "Image",
+        },
+        {
             img: "img/IMG_3319.webp",
+            title: "Image",
+        },
+        {
+            img: "img/IMG_2884.webp",
+            title: "Image",
+        },
+        {
+            img: "img/IMG_3499.webp",
             title: "Image",
         },
         {
@@ -22,23 +34,11 @@ const Accueil = () => {
             title: "Image",
         },
         {
-            img: "img/IMG_2651.webp",
-            title: "Image",
-        },
-        {
-            img: "img/IMG_2884.webp",
-            title: "Image",
-        },
-        {
             img: "img/IMG_2789.webp",
             title: "Image",
         },
         {
             img: "img/IMG_3092.webp",
-            title: "Image",
-        },
-        {
-            img: "img/IMG_3499.webp",
             title: "Image",
         },
         {
@@ -61,10 +61,7 @@ const Accueil = () => {
             img: "img/IMG_3722.webp",
             title: "Image",
         },
-        {
-            img: "img/IMG_3725.webp",
-            title: "Image",
-        }
+
     ]
 
     const [index, setIndex] = useState(0);
@@ -137,6 +134,7 @@ const Accueil = () => {
                             <img
                                 style={{ width: "auto", height: "100%" }}
                                 src={itemData[index].img}
+                                loading="lazy"
                                 alt={`Image ${i}`}
                             />
                         </animated.div>
