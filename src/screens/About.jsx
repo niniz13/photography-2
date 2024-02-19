@@ -4,7 +4,7 @@ import { animated, useSpring } from '@react-spring/web';
 import Base from "../components/Base"
 
 const About = () => {
-    const isSmallScreen = useMediaQuery('(max-width:1050px)');
+    const isSmallScreen = useMediaQuery('(max-width:800px)');
 
     const upSlideAnimation = useSpring({
         from: { opacity: 0, transform: 'translateY(50vh)' },
@@ -37,7 +37,8 @@ const About = () => {
                 }}>
 
                     <img style={{ width: "100%" }}
-                        src="img/IMG_3321.JPG"
+                        loading="lazy"
+                        src="img/IMG_3729.webp"
                         alt="About picture"
                     />
                     <Typography sx={{
@@ -57,21 +58,11 @@ const About = () => {
                     alignItems: "center",
                     margin: isSmallScreen ? "0 1em" : ""
                 }}>
-                    <Typography sx={{
-                        display: isSmallScreen ? "None" : "flex",
-                        position: "relative",
-                        top: "7vh",
-                        zIndex: "999",
-                        fontSize: "7vw",
-                        fontWeight: "400",
-                        lineHeight: "0.9",
-                        fontFamily: "Tangerine"
-                    }}>
-                        Jérémy Gross
-                    </Typography>
+
                     <Box>
                         <img style={{ width: "100%", }}
-                            src="img/IMG_1689.JPG"
+                            loading="lazy"
+                            src="img/IMG_0843.webp"
                             alt="About picture" />
                     </Box>
 
@@ -92,7 +83,8 @@ const About = () => {
                         Join me on this visual journey through the link below!
                     </Typography>
                     <img style={{ width: "100%" }}
-                        src="img/IMG_7877.JPG"
+                        loading="lazy"
+                        src="img/IMG_0891.webp"
                         alt="About picture"
                     />
                 </animated.div>

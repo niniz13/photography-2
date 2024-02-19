@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import Accueil from "./screens/Accueil"
 import About from "./screens/About"
 import NotFound from "./components/NotFound"
+import Gears from "./screens/Gears"
 
 const Routes = () => {
     const publicRoutes = [
@@ -22,6 +23,13 @@ const Routes = () => {
         {
             path: '/about',
             element: <About />
+        },
+        /*---------------------------------*/
+        /*------------- GEARS -------------*/
+        /*---------------------------------*/
+        {
+            path: '/gears',
+            element: <Gears />
         },
         /*----------------------------------*/
         /*------------- ERREUR 404 ----------*/
