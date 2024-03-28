@@ -11,6 +11,11 @@ const Gears = () => {
             description: "My main camera, that replace my old Canon 2000D"
         },
         {
+            img: "img/gears/50mm.jpg",
+            title: "EF 50mm f/1.4 USM",
+            description: "Good lense with large opening"
+        },
+        {
             img: "img/gears/1855mm.jpg",
             title: "EF-S 18-55mm f/3.5-5.6 IS II",
             description: "Basic lense but it does the job"

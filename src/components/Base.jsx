@@ -155,7 +155,7 @@ const Base = ({ children }) => {
                     fontSize: "1.2em",
                     fontFamily: "Bebas Neue"
                 }}>
-                    &copy; Copyright, Jérémy Gross 2023
+                    &copy; Copyright, Jérémy Gross 2024
                 </Typography>
                 <Box>
                     <FooterIcon
@@ -164,19 +164,19 @@ const Base = ({ children }) => {
                         src={"img/instagram.png"}
                     />
                     <FooterIcon
+                        href={"https://www.threads.net/@grs__jeremy"}
+                        alt={"Thread Icon"}
+                        src={"img/thread.png"}
+                    />
+                    <FooterIcon
                         href={"https://twitter.com/jeremgross13"}
                         alt={"Twitter Icon"}
-                        src={"img/twitter.png"}
+                        src={"img/x.png"}
                     />
                     <FooterIcon
                         href={"https://www.linkedin.com/in/j%C3%A9r%C3%A9my-gross-159a8622b/"}
                         alt={"Linkedin Icon"}
                         src={"img/linkedin.png"}
-                    />
-                    <FooterIcon
-                        href={"https://github.com/JeremyGross13"}
-                        alt={"Github Icon"}
-                        src={"img/github.png"}
                     />
                 </Box>
 
