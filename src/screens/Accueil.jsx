@@ -13,6 +13,7 @@ import {
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CustomButton from '../components/CustomButton';
 import CustomButtonTransparent from '../components/CustomButtonTransparent';
+import Slider from '../components/home/Slider';
 
 const event = [
   {
@@ -27,6 +28,17 @@ const event = [
       'luxury aficionados and discerning collectors.',
   },
   { summary: "2024 - Salon de l'auto Genève" },
+];
+
+const imagesCaroussel = [
+  'img/HomeCaroussel/caroussel1.webp',
+  'img/HomeCaroussel/caroussel2.webp',
+  'img/HomeCaroussel/caroussel3.webp',
+  'img/HomeCaroussel/caroussel4.webp',
+  'img/HomeCaroussel/caroussel5.webp',
+  'img/HomeCaroussel/caroussel6.webp',
+  'img/HomeCaroussel/caroussel7.webp',
+  'img/HomeCaroussel/caroussel8.webp',
 ];
 
 const Accueil = () => {
@@ -195,6 +207,49 @@ const Accueil = () => {
               </Accordion>
             ))}
           </Box>
+        </Box>
+      </Box>
+
+      <Box
+        sx={{
+          width: '100vw',
+          minHeight: '100vh',
+          paddingBottom: '100px',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Box
+          sx={{
+            width: '90%',
+          }}
+        >
+          <Typography
+            sx={{
+              color: '#F5F5F5',
+              fontFamily: 'Domine, serif',
+              fontSize: '108px',
+              letterSpacing: '-1%',
+              lineHeight: '110%',
+              marginBottom: '20px',
+            }}
+          >
+            Night Vision
+          </Typography>
+          <Typography
+            sx={{
+              color: '#F5F5F5',
+              fontFamily: 'Open Sans, sans-serif',
+              fontSize: '22px',
+              lineHeight: '140%',
+              marginBottom: '50px',
+            }}
+          >
+            Dive into the world of car photography with me.
+          </Typography>
+          <Slider images={imagesCaroussel} />
         </Box>
       </Box>
     </Base>
