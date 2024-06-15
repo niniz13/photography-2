@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, useMediaQuery } from '@mui/material';
+import { Box, useMediaQuery, Grid, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import NavBarLinks from './NavBarLinks';
 import NavBarTitle from './NavBarTitle';
@@ -62,7 +62,202 @@ const Base = ({ children }) => {
           <NavBarLinks label={'To define'} links={'/'} />
         </Box>
       </Box>
+
       <Box>{children}</Box>
+
+      <Box
+        sx={{
+          backgroundColor: '#F5F5F5',
+          padding: '40px 20px',
+        }}
+      >
+        <Grid
+          container
+          spacing={4}
+          sx={{ display: 'flex', justifyContent: 'center' }}
+        >
+          <Grid item xs={12} sm={6} md={2}>
+            <Typography
+              sx={{
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '14px',
+                lineHeight: '160%',
+                textDecoration: 'underline',
+              }}
+            >
+              Company
+            </Typography>
+            <Typography
+              href='#'
+              sx={{
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '14px',
+                lineHeight: '160%',
+                cursor: 'pointer',
+                width: 'fit-content',
+              }}
+            >
+              About
+            </Typography>
+            <Typography
+              href='#'
+              sx={{
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '14px',
+                lineHeight: '160%',
+                cursor: 'pointer',
+                width: 'fit-content',
+              }}
+            >
+              Careers
+            </Typography>
+            <Typography
+              href='#'
+              sx={{
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '14px',
+                lineHeight: '160%',
+                cursor: 'pointer',
+                width: 'fit-content',
+              }}
+            >
+              Newsroom
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={6} md={2}>
+            <Typography
+              sx={{
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '14px',
+                lineHeight: '160%',
+                textDecoration: 'underline',
+              }}
+            >
+              Features
+            </Typography>
+            <Typography
+              href='#'
+              sx={{
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '14px',
+                lineHeight: '160%',
+                cursor: 'pointer',
+                width: 'fit-content',
+              }}
+            >
+              Speed
+            </Typography>
+            <Typography
+              href='#'
+              sx={{
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '14px',
+                lineHeight: '160%',
+                cursor: 'pointer',
+                width: 'fit-content',
+              }}
+            >
+              Flexibility
+            </Typography>
+            <Typography
+              href='#'
+              sx={{
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '14px',
+                lineHeight: '160%',
+                cursor: 'pointer',
+                width: 'fit-content',
+              }}
+            >
+              Gallery
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={6} md={2}>
+            <Typography
+              sx={{
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '14px',
+                lineHeight: '160%',
+                textDecoration: 'underline',
+              }}
+            >
+              Social
+            </Typography>
+            <Typography
+              href='#'
+              sx={{
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '14px',
+                lineHeight: '160%',
+                cursor: 'pointer',
+                width: 'fit-content',
+              }}
+            >
+              Twitter
+            </Typography>
+            <Typography
+              href='#'
+              sx={{
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '14px',
+                lineHeight: '160%',
+                cursor: 'pointer',
+                width: 'fit-content',
+              }}
+            >
+              Instagram
+            </Typography>
+            <Typography
+              href='#'
+              sx={{
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '14px',
+                lineHeight: '160%',
+                cursor: 'pointer',
+                width: 'fit-content',
+              }}
+            >
+              Threads
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={6} md={2}>
+            <Typography
+              sx={{
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '14px',
+                lineHeight: '160%',
+                textDecoration: 'underline',
+              }}
+            >
+              Legal
+            </Typography>
+            <Typography
+              href='#'
+              sx={{
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '14px',
+                lineHeight: '160%',
+                cursor: 'pointer',
+                width: 'fit-content',
+              }}
+            >
+              Terms
+            </Typography>
+            <Typography
+              href='#'
+              sx={{
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '14px',
+                lineHeight: '160%',
+                cursor: 'pointer',
+                width: 'fit-content',
+              }}
+            >
+              Privacy
+            </Typography>
+          </Grid>
+        </Grid>
+      </Box>
     </Box>
   );
 };

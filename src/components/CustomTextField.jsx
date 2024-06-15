@@ -1,8 +1,23 @@
 import { TextField } from '@mui/material';
 
-const CustomTextField = ({ placeholder, height }) => {
+const CustomTextField = ({
+  name,
+  value,
+  onChange,
+  placeholder,
+  height,
+  multiline = false,
+  rows = 1,
+}) => {
   return (
     <TextField
+      name={name}
+      value={value}
+      onChange={onChange}
+      placeholder={placeholder}
+      variant='standard'
+      multiline={multiline}
+      rows={rows}
       InputProps={{
         sx: {
           width: '520px',
@@ -22,8 +37,6 @@ const CustomTextField = ({ placeholder, height }) => {
           },
         },
       }}
-      placeholder={placeholder}
-      variant='standard'
     />
   );
 };

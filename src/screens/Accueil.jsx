@@ -8,7 +8,8 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  TextField,
+  Button,
+  Grid,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CustomButton from '../components/CustomButton';
@@ -41,50 +42,75 @@ const imagesCaroussel = [
 ];
 
 const Accueil = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, email, message } = formData;
+    const mailtoLink = `mailto:jeremyspam1307@gmail.com?subject=New Contact Message&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+    )}`;
+    window.location.href = mailtoLink;
+  };
+
   return (
     <Base>
       <Box
         sx={{
           minHeight: '100vh',
           display: 'flex',
-          flexDirection: 'row',
+          flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
         }}
       >
-        <Box
+        <Grid
+          container
+          spacing={2}
           sx={{
             maxWidth: '800px',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: '25px',
+            textAlign: 'center',
           }}
         >
-          <Typography
-            sx={{
-              textAlign: 'center',
-              color: '#F5F5F5',
-              fontFamily: 'Domine, serif',
-              fontSize: '108px',
-              lineHeight: '110%',
-              letterSpacing: '-1%',
-            }}
-          >
-            Capture the World
-          </Typography>
-          <Typography
-            sx={{
-              color: '#F5F5F5',
-              fontFamily: 'Open Sans, sans-serif',
-              fontSize: '22px',
-            }}
-          >
-            Embrace the Darkness.
-          </Typography>
-          <CustomButton label={'Explore Now'} links={'/'} />
-        </Box>
+          <Grid item xs={12}>
+            <Typography
+              sx={{
+                color: '#F5F5F5',
+                fontFamily: 'Domine, serif',
+                fontSize: { xs: '48px', sm: '72px', md: '108px' },
+                lineHeight: '110%',
+                letterSpacing: '-1%',
+              }}
+            >
+              Capture the World
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography
+              sx={{
+                color: '#F5F5F5',
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: { xs: '18px', sm: '22px' },
+              }}
+            >
+              Embrace the Darkness.
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <CustomButton label={'Explore Now'} links={'/'} />
+          </Grid>
+        </Grid>
       </Box>
 
       <Box
@@ -93,17 +119,16 @@ const Accueil = () => {
           minHeight: '100vh',
           paddingBottom: '100px',
           display: 'flex',
-          flexDirection: 'row',
           justifyContent: 'center',
-          alignItems: 'center',
         }}
       >
         <ImageList
           sx={{
+            width: '100%',
             padding: '10px',
           }}
           variant='masonry'
-          cols={3}
+          cols={{ xs: 1, sm: 2, md: 3 }}
           gap={8}
         >
           <ImageListItem>
@@ -124,36 +149,41 @@ const Accueil = () => {
           minHeight: '100vh',
           paddingBottom: '100px',
           display: 'flex',
-          flexDirection: 'row',
           justifyContent: 'center',
-          alignItems: 'center',
         }}
       >
-        <Box
+        <Grid
+          container
+          spacing={2}
           sx={{
-            width: '1024px',
+            width: '100%',
+            maxWidth: '1024px',
           }}
         >
-          <Typography
-            sx={{
-              color: '#A855F7',
-              fontFamily: 'Domine, serif',
-              fontSize: '36px',
-            }}
-          >
-            About Me
-          </Typography>
-          <Typography
-            sx={{
-              color: '#F5F5F5',
-              paddingBottom: '50px',
-              fontFamily: 'Domine, serif',
-              fontSize: '46px',
-            }}
-          >
-            A passionate photographer capturing car, streets and landscapes
-          </Typography>
-          <Box>
+          <Grid item xs={12}>
+            <Typography
+              sx={{
+                color: '#A855F7',
+                fontFamily: 'Domine, serif',
+                fontSize: '36px',
+              }}
+            >
+              About Me
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography
+              sx={{
+                color: '#F5F5F5',
+                paddingBottom: '50px',
+                fontFamily: 'Domine, serif',
+                fontSize: '46px',
+              }}
+            >
+              A passionate photographer capturing car, streets and landscapes
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
             <Typography
               sx={{
                 color: '#F5F5F5',
@@ -164,8 +194,9 @@ const Accueil = () => {
             >
               Experience
             </Typography>
-            {event.map((item) => (
+            {event.map((item, index) => (
               <Accordion
+                key={index}
                 sx={{
                   backgroundColor: 'transparent',
                 }}
@@ -198,8 +229,8 @@ const Accueil = () => {
                 </AccordionDetails>
               </Accordion>
             ))}
-          </Box>
-        </Box>
+          </Grid>
+        </Grid>
       </Box>
 
       <Box
@@ -217,46 +248,50 @@ const Accueil = () => {
           sx={{
             color: '#F5F5F5',
             fontFamily: 'Domine, serif',
-            fontSize: '108px',
+            fontSize: { xs: '48px', sm: '72px', md: '108px' },
             letterSpacing: '-1%',
             lineHeight: '110%',
             marginBottom: '20px',
+            textAlign: 'center',
           }}
         >
-          Sport, Luxuary
+          Sport, Luxury
         </Typography>
         <Typography
           sx={{
             color: '#F5F5F5',
             fontFamily: 'Open Sans, sans-serif',
-            fontSize: '22px',
+            fontSize: { xs: '18px', sm: '22px' },
             lineHeight: '140%',
             marginBottom: '50px',
+            textAlign: 'center',
           }}
         >
           Dive into the world of car photography with me.
         </Typography>
-        <ImageList
+        <Grid
+          container
+          spacing={2}
           sx={{
+            width: '100%',
             padding: '50px',
           }}
-          variant='masonry'
-          cols={4}
-          gap={8}
         >
-          {imagesCaroussel.map((item) => (
-            <ImageListItem>
+          {imagesCaroussel.map((item, index) => (
+            <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
               <img
                 style={{
                   borderRadius: '32px',
+                  width: '100%',
+                  height: 'auto',
                 }}
                 src={item}
                 alt=''
                 loading='lazy'
               />
-            </ImageListItem>
+            </Grid>
           ))}
-        </ImageList>
+        </Grid>
       </Box>
 
       <Box
@@ -274,10 +309,11 @@ const Accueil = () => {
           sx={{
             color: '#F5F5F5',
             fontFamily: 'Domine, serif',
-            fontSize: '72px',
+            fontSize: { xs: '48px', sm: '72px', md: '108px' },
             letterSpacing: '-1%',
-            lineHeight: '108%',
+            lineHeight: '110%',
             marginBottom: '20px',
+            textAlign: 'center',
           }}
         >
           Contact me
@@ -286,26 +322,86 @@ const Accueil = () => {
           sx={{
             color: '#F5F5F5',
             fontFamily: 'Open Sans, sans-serif',
-            fontSize: '22px',
+            fontSize: { xs: '18px', sm: '22px' },
             lineHeight: '140%',
             marginBottom: '50px',
+            textAlign: 'center',
           }}
         >
           Let's create together
         </Typography>
-        <Box
+        <Grid
+          container
+          spacing={2}
+          component='form'
+          onSubmit={handleSubmit}
           sx={{
+            width: '100%',
+            maxWidth: '600px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: '20px',
           }}
         >
-          <CustomTextField placeholder={'Your name'} height={'56px'} />
-          <CustomTextField placeholder={'Your email'} height={'56px'} />
-          <CustomTextField placeholder={'Your message'} height={'174px'} />
-          <CustomButton label={'Submit'} />
-        </Box>
+          <Grid item xs={12}>
+            <CustomTextField
+              name='name'
+              placeholder='Your name'
+              height='56px'
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <CustomTextField
+              name='email'
+              placeholder='Your email'
+              height='56px'
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <CustomTextField
+              name='message'
+              placeholder='Your message'
+              height='174px'
+              multiline
+              rows={4}
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <Button
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '100%',
+                maxWidth: '360px',
+                height: '57px',
+                backgroundColor: '#A855F7',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                transition: 'ease-in 0.1s',
+                color: '#F5F5F5',
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize: '18px',
+                '&:hover': {
+                  scale: '1.05',
+                  backgroundColor: '#A855F7',
+                },
+              }}
+              type='submit'
+            >
+              Submit
+            </Button>
+          </Grid>
+        </Grid>
       </Box>
     </Base>
   );
