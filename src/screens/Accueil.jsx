@@ -8,12 +8,11 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  Grid,
+  TextField,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CustomButton from '../components/CustomButton';
-import CustomButtonTransparent from '../components/CustomButtonTransparent';
-import Slider from '../components/home/Slider';
+import CustomTextField from '../components/CustomTextField';
 
 const event = [
   {
@@ -195,14 +194,7 @@ const Accueil = () => {
                     padding: '20px',
                   }}
                 >
-                  <Box sx={{ paddingRight: '20px' }}>{item.detail}</Box>
-                  <Box
-                    sx={{
-                      width: '50%',
-                    }}
-                  >
-                    <CustomButtonTransparent label={'View Gallery'} />
-                  </Box>
+                  {item.detail}
                 </AccordionDetails>
               </Accordion>
             ))}
@@ -221,35 +213,98 @@ const Accueil = () => {
           alignItems: 'center',
         }}
       >
-        <Box
+        <Typography
           sx={{
-            width: '90%',
+            color: '#F5F5F5',
+            fontFamily: 'Domine, serif',
+            fontSize: '108px',
+            letterSpacing: '-1%',
+            lineHeight: '110%',
+            marginBottom: '20px',
           }}
         >
-          <Typography
-            sx={{
-              color: '#F5F5F5',
-              fontFamily: 'Domine, serif',
-              fontSize: '108px',
-              letterSpacing: '-1%',
-              lineHeight: '110%',
-              marginBottom: '20px',
-            }}
-          >
-            Night Vision
-          </Typography>
-          <Typography
-            sx={{
-              color: '#F5F5F5',
-              fontFamily: 'Open Sans, sans-serif',
-              fontSize: '22px',
-              lineHeight: '140%',
-              marginBottom: '50px',
-            }}
-          >
-            Dive into the world of car photography with me.
-          </Typography>
-          <Slider images={imagesCaroussel} />
+          Sport, Luxuary
+        </Typography>
+        <Typography
+          sx={{
+            color: '#F5F5F5',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize: '22px',
+            lineHeight: '140%',
+            marginBottom: '50px',
+          }}
+        >
+          Dive into the world of car photography with me.
+        </Typography>
+        <ImageList
+          sx={{
+            padding: '50px',
+          }}
+          variant='masonry'
+          cols={4}
+          gap={8}
+        >
+          {imagesCaroussel.map((item) => (
+            <ImageListItem>
+              <img
+                style={{
+                  borderRadius: '32px',
+                }}
+                src={item}
+                alt=''
+                loading='lazy'
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </Box>
+
+      <Box
+        sx={{
+          width: '100vw',
+          minHeight: '100vh',
+          paddingBottom: '100px',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Typography
+          sx={{
+            color: '#F5F5F5',
+            fontFamily: 'Domine, serif',
+            fontSize: '72px',
+            letterSpacing: '-1%',
+            lineHeight: '108%',
+            marginBottom: '20px',
+          }}
+        >
+          Contact me
+        </Typography>
+        <Typography
+          sx={{
+            color: '#F5F5F5',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize: '22px',
+            lineHeight: '140%',
+            marginBottom: '50px',
+          }}
+        >
+          Let's create together
+        </Typography>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '20px',
+          }}
+        >
+          <CustomTextField placeholder={'Your name'} height={'56px'} />
+          <CustomTextField placeholder={'Your email'} height={'56px'} />
+          <CustomTextField placeholder={'Your message'} height={'174px'} />
+          <CustomButton label={'Submit'} />
         </Box>
       </Box>
     </Base>
